@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "label": "npm: build",
+            "detail": "tsc"
+        },
+        {
+            "type": "npm",
+            "script": "test",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$jest"
+            ],
+            "label": "npm: test",
+            "detail": "jest"
+        },
+        {
+            "type": "npm",
+            "script": "dev",
+            "problemMatcher": [
+                "$tsc-watch"
+            ],
+            "label": "npm: dev",
+            "detail": "nodemon",
+            "isBackground": true
+        },
+        {
+            "type": "npm",
+            "script": "lint",
+            "problemMatcher": [
+                "$eslint-stylish"
+            ],
+            "label": "npm: lint",
+            "detail": "eslint"
+        },
+        {
+            "type": "npm",
+            "script": "db:init",
+            "problemMatcher": [],
+            "label": "npm: db:init",
+            "detail": "Initialize database"
+        }
+    ]
+}
